@@ -19,8 +19,8 @@ const ToggleThemeComponent = React.forwardRef<HTMLLabelElement, Props>(
           id={styles.input_toggle_nav}
           onClick={changeTheme}
         />
-        <Moon size="32" className={styles.theme_icon_dark} />
         <Sun1 size="32" className={styles.theme_icon_light} />
+        <Moon size="32" className={styles.theme_icon_dark} />
       </label>
     );
   }

@@ -35,10 +35,10 @@ const HeaderComponent: React.FC = () => {
           flushSync(() => {
             if (theme) {
               setTheme(!theme);
-              document.documentElement.classList.add("dark");
+              document.documentElement.classList.remove("dark");
             } else {
               setTheme(!theme);
-              document.documentElement.classList.remove("dark");
+              document.documentElement.classList.add("dark");
             }
           });
         }).ready;
