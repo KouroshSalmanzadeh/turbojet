@@ -9,12 +9,20 @@
   --background: #FFF7E9;
   --foreground: hsl(240, 5%, 26%);
   --scroll-color: #1746A2;
+
+  --bg-svg: var(--background);
+  --bg-secondary-svg: #f2f2f2;
+  --border-svg: #e6e6e6;
 }
 
 :root[class="dark"] {
   --background: hsl(240, 4%, 16%);
   --foreground: hsl(0, 0%, 100%);
   --scroll-color: #FF731D;
+
+  --bg-svg: var(--background);
+  --bg-secondary-svg: #1d1d1d;
+  --border-svg: #464646;
 }
 
 ::view-transition-old(root),
@@ -32,11 +40,19 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .animate-transformY {
+    animation: transformY 10s linear infinite forwards;
   }
 }
 
@@ -66,5 +82,26 @@ body::-webkit-scrollbar-thumb, .scroll {
   body {
     scrollbar-color: var(--sb-thumb-color)
                      var(--sb-track-color);
+  }
+}
+
+@keyframes transformY {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  10% {
+    transform: translateY(10%) translateX(10%);
+  }
+  20% {
+    transform: translateY(20%) translateX(20%);
+  }
+  30% {
+    transform: translateY(30%) translateX(30%);
+  }
+  40% {
+    transform: translateY(40%) translateX(40%);
+  }
+  50% {
+    transform: translateY(50%) translateX(50%);
   }
 }

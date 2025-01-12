@@ -91,7 +91,7 @@ const HeaderComponent: React.FC = () => {
       </div>
 
       {/* Navigation Links */}
-      <nav className="hidden w-full sm:flex items-center justify-center gap-4 lg:gap-8 text-lg lg:text-xl">
+      <nav className="hidden w-full sm:flex items-center justify-center gap-4 lg:gap-8 text-lg lg:text-xl font-semibold">
         <Link href="/" className="text-zinc-700 hover:font-DanaBold hover:scale-110 dark:text-white hover:text-primary dark:hover:text-primary transition-all">
           صفحه اصلی
         </Link>
