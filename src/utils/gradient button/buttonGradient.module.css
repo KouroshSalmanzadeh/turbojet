@@ -1,0 +1,14 @@
+.gradient-button {
+    @apply w-52 flex items-center justify-center gap-2 hover:gap-4 hover:w-56 py-2 rounded-xl text-xl active:scale-90 ;
+    background-position: right center;
+    background-size: 200%;
+    transition: all 0.3s ease;
+
+    &:hover {
+        @apply text-white;
+
+        background-position: left center;
+        background-size: 200%;
+        transition: all 0.3s ease;
+    }
+}

@@ -1,20 +1,27 @@
+import SquareDotsSvg from "@/assets/Background filler/SquareDotsSvg";
 import TickIcon from "@/assets/icons/TickIcon";
 import DevicesSvg from "@/assets/illustration/DevicesSvg";
 
+import styles from "./page.module.css";
+
+import { CallCalling, Category2 } from "iconsax-react";
+
+import ButtonGradientComponent from "@/utils/gradient button/ButtonGradientComponent";
+
 export default function Home() {
   return (
-    <div className="h-screen w-full flex items-center justify-between container">
-      <div className="grow h-full flex-center flex-col gap-10">
-        <div className="flex flex-col items-center gap-5">
-          <h1 className="text-6xl font-MorabbaBold text-primary text-center">توربوجت:</h1>
-          <p className="text-xl">
+    <div className={styles.home}>
+      <div className={styles.content}>
+        <div className={styles.title_desc}>
+          <h1 className={styles.title}>توربوجت:</h1>
+          <p>
             طراحی سایت و فروشگاه اینترنتی خود را با ما شروع کنید!
           </p>
-          <p className="justify-center text-center">
+          <p>
             تمامی نیازمندی های کسب و کار خود را با توربوجت در سریع ترین و با کیفیت ترین حالت بدست آورید
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-4 child:flex child:items-center child:gap-4 child:text-2xl child:text-secondary_deep">
+        <div className={styles.title_services}>
           <span>
             <TickIcon />
             طراحی وبسایت و اپلیکیشن
@@ -32,9 +39,18 @@ export default function Home() {
             افزایش ترافیک
           </span>
         </div>
+        <div className={styles.buttons}>
+        <ButtonGradientComponent color="secondary_light" colors={["from-secondary_deep", "to-blue-400"]} icon={<CallCalling size="32" />} text="مشاوره" />
+        <ButtonGradientComponent color="black" colors={["from-primary", "to-orange-300"]} icon={<Category2 size="32" />} text="نمونه کارها" />
+        </div>
       </div>
-      <DevicesSvg />
-      <div className="absolute -left-[300px] top-96 -z-40 h-[400px] w-[1000px] -rotate-[22deg] opacity-70 blur-[100px] animate-transformY" style={{background:"radial-gradient(50% 50% at 50% 50%, #FF731D 0%, rgba(127, 47, 207, 0) 100%)",transform:"translate3d(0, 0, 0)"}}></div>
+      <div>
+        <DevicesSvg className={styles.image_devices} />
+      </div>
+      <div aria-hidden className={styles.gradient_circle_animate + " animate-transformY"}></div>
+      <div className={styles.dots_pattern}>
+        <SquareDotsSvg />
+      </div>
     </div>
   );
 }

@@ -107,9 +107,6 @@ const HeaderComponent: React.FC = () => {
         <Link href="/contact" className="text-zinc-700 hover:font-DanaBold hover:scale-110 dark:text-white hover:text-primary dark:hover:text-primary transition-all">
           تماس با ما
         </Link>
-        <Link href="/other" className="text-zinc-700 hover:font-DanaBold hover:scale-110 dark:text-white hover:text-primary dark:hover:text-primary transition-all">
-          دیگرشری
-        </Link>
       </nav>
 
       {/* Icons and Authentication */}

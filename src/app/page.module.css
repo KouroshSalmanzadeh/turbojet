@@ -1,0 +1,45 @@
+.home {
+    @apply relative h-screen w-full flex flex-col-reverse mt-40 lg:mt-0 lg:flex-row items-center justify-center lg:justify-between container;
+
+    .content {
+        @apply grow h-full flex-center flex-col gap-10;
+
+        .title_desc {
+            @apply flex flex-col items-center gap-5;
+
+            h1.title {
+                @apply text-6xl font-MorabbaBold text-primary text-center;
+            }
+
+            p:first-child {
+                @apply text-xl text-center;
+            }
+
+            p:last-child {
+                @apply justify-center text-center;
+            }
+        }
+
+        .title_services {
+            @apply grid grid-cols-1 lg:grid-cols-2 gap-6 child:flex child:items-center child:gap-4 child:text-2xl child:font-MorabbaBold child:bg-gradient-to-l child:text-transparent child:from-secondary_deep child:via-secondary_light child:to-secondary_deep child:bg-clip-text;
+        }
+
+        .buttons {
+            @apply w-full flex-center gap-10 mt-4;
+        }
+    }
+
+    .image_devices {
+        @apply w-full h-full;
+    }
+
+    .gradient_circle_animate {
+        @apply absolute left-0 xl:-left-[300px] top-1/3 lg:top-96 -z-40 h-[400px] w-[400px] lg:w-[600px] xl:w-[1000px] -rotate-[22deg] opacity-70 blur-[100px];
+        background: radial-gradient(50% 50% at 50% 50%, #FF731D 0%, rgba(127, 47, 207, 0) 100%);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .dots_pattern {
+        @apply hidden xl:block absolute -right-80;
+    }
+}

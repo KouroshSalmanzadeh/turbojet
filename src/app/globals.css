@@ -6,13 +6,18 @@
 
 :root {
   /* --background: yyhsl(220, 14%, 96%); */
-  --background: #FFF7E9;
+  --background: hsl(38, 100%, 96%);
   --foreground: hsl(240, 5%, 26%);
-  --scroll-color: #1746A2;
+  --scroll-color: hsl(220, 75%, 36%);
 
   --bg-svg: var(--background);
-  --bg-secondary-svg: #f2f2f2;
-  --border-svg: #e6e6e6;
+  --bg-secondary-svg: hsl(0, 0%, 95%);
+  --border-svg: hsl(0, 0%, 90%);
+
+  --primary-color: hsl(23, 100%, 56%);
+  --secondary-deep-color: hsl(220, 75%, 36%);
+  --secondary-light-color: hsl(216, 90%, 67%);
+  --bg-primary: hsl(38, 100%, 96%);
 }
 
 :root[class="dark"] {
@@ -54,6 +59,15 @@ body {
   .animate-transformY {
     animation: transformY 10s linear infinite forwards;
   }
+
+  .animate-neon-text-primary-shadow {
+    animation: neon-text-primary 1s ease-in-out infinite alternate;
+  }
+
+  .animate-neon-text-secondary-shadow {
+    animation: neon-text-secondary-shadow 1s ease-in-out infinite alternate;
+  }
+
 }
 
 
@@ -103,5 +117,22 @@ body::-webkit-scrollbar-thumb, .scroll {
   }
   50% {
     transform: translateY(50%) translateX(50%);
+  }
+}
+
+@keyframes neon-text-primary-shadow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--primary-color), 0 0 40px var(--primary-color), 0 0 50px var(--primary-color), 0 0 60px var(--primary-color), 0 0 70px var(--primary-color);
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px hsl(23, 100%, 50%), 0 0 40px hsl(23, 100%, 50%), 0 0 50px hsl(23, 100%, 50%), 0 0 60px hsl(23, 100%, 50%), 0 0 70px hsl(23, 100%, 56%), 0 0 80px hsl(23, 100%, 56%);
+  }
+}
+@keyframes neon-text-secondary-shadow {
+  from {
+    text-shadow: 0 0 10px var(--secondary-deep-color), 0 0 20px var(--secondary-deep-color), 0 0 30px var(--secondary-deep-color), 0 0 40px var(--secondary-deep-color), 0 0 50px var(--secondary-deep-color), 0 0 60px var(--secondary-deep-color), 0 0 70px var(--secondary-deep-color);
+  }
+  to {
+    text-shadow: 0 0 20px var(--secondary-deep-color), 0 0 30px var(--secondary-light-color), 0 0 40px var(--secondary-light-color), 0 0 50px var(--secondary-light-color), 0 0 60px var(--secondary-light-color), 0 0 70px var(--secondary-light-color), 0 0 80px var(--secondary-light-color);
   }
 }

@@ -1,0 +1,45 @@
+.button-primary {
+    @apply flex items-center justify-center gap-2 px-14 py-2 text-zinc-700 rounded-xl text-xl active:scale-90;
+    
+    background: linear-gradient(134deg, var(--primary-color) 35%, white, var(--primary-color) 65%);
+    background-position: left center;
+    background-size: 320%;
+
+    transition: all 0.3s ease;
+
+    &:hover, svg:hover {
+        background-position: right center;
+        background-size: 320%;
+        color: white;
+    }
+}
+
+.button-secondary_deep {
+    @apply flex items-center justify-center gap-2 px-14 py-2 rounded-xl text-xl active:scale-90;
+    background: linear-gradient(134deg, var(--secondary-deep-color) 35%, white, var(--secondary-deep-color) 65%);
+    background-position: left center;
+    background-size: 320%;
+
+    transition: all 0.3s ease;
+
+    &:hover, svg:hover {
+        background-position: right center;
+        background-size: 320%;
+        color: white;
+    }
+}
+
+.button-secondary_light {
+    @apply flex items-center justify-center gap-2 px-14 py-2 rounded-xl text-xl active:scale-90;
+    background: linear-gradient(134deg, var(--secondary-light-color) 35%, white, var(--secondary-light-color) 65%);
+    background-position: left center;
+    background-size: 320%;
+
+    transition: all 0.3s ease;
+
+    &:hover, svg:hover {
+        background-position: right center;
+        background-size: 320%;
+        color: white;
+    }
+}
