@@ -114,6 +114,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div aria-hidden className={styles.gradient_circle_animate + " animate-transformY md:animate-transformYX"}></div>
       </div>
     </div>
   );

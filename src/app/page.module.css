@@ -45,7 +45,7 @@
 }
 
 .services {
-    @apply container mb-10 flex items-center justify-between gap-20 text-center;
+    @apply relative container mb-10 flex items-center justify-between gap-20 text-center;
 
     
     .content {
@@ -78,9 +78,21 @@
 
 
             .box:nth-child(even) {
+                @apply mt-10;
+            }
+
+            .box:nth-child(3) {
+                @apply -mt-4;
+            }
+            .box:nth-child(4) {
                 @apply mt-6;
             }
-        }
-        
+        }        
+    }
+
+    .gradient_circle_animate  {
+        @apply absolute left-0 xl:-left-[150px] top-1/4 lg:top-96 -z-40 h-[400px] w-[400px] lg:w-[600px] xl:w-[1000px] -rotate-[22deg] opacity-70 blur-[100px];
+        background: radial-gradient(50% 50% at 50% 50%, var(--secondary-deep-color) 0%, rgba(127, 47, 207, 0) 100%);
+        transform: translate3d(0, 0, 0);
     }
 }

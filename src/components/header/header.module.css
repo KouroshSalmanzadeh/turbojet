@@ -1,6 +1,6 @@
 .header {
     @apply w-full h-20 flex items-center justify-between rounded-b-xl sm:w-[97%] lg:w-[90%] sm:h-24 fixed top-0 sm:top-4 lg:top-9 right-0 left-0 sm:rounded-3xl mx-auto z-50 md:px-5 px-5 lg:px-10 bg-secondary_deep/50
-    backdrop-blur-[6px];
+    backdrop-blur-[8px];
 
     .mobile_menu {
         @apply sm:hidden;
