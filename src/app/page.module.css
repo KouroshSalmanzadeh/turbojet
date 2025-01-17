@@ -1,22 +1,22 @@
 .home {
-    @apply relative h-screen w-full flex flex-col-reverse mt-40 lg:mt-0 lg:flex-row items-center justify-center lg:justify-between container;
+    @apply relative h-screen w-full flex flex-col-reverse gap-8 my-40 lg:mt-0 lg:mb-0 lg:flex-row items-center justify-center lg:justify-between container;
 
     .content {
         @apply grow h-full flex-center flex-col gap-10;
 
         .title_desc {
-            @apply flex flex-col items-center gap-5;
+            @apply flex flex-col items-center gap-5 child:text-center;
 
             h1.title {
                 @apply text-6xl font-MorabbaBold text-primary text-center;
             }
 
-            p:first-child {
-                @apply text-xl text-center;
+            p:nth-child(2) {
+                @apply text-xl font-DanaBold text-secondary_light;
             }
 
             p:last-child {
-                @apply justify-center text-center;
+                @apply justify-center;
             }
         }
 
@@ -25,7 +25,7 @@
         }
 
         .buttons {
-            @apply w-full flex-center gap-10 mt-4;
+            @apply w-full flex-center flex-col md:flex-row child:grow child:w-full gap-4 md:gap-10 mt-4;
         }
     }
 

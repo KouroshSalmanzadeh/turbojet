@@ -5,7 +5,6 @@
 @tailwind utilities;
 
 :root {
-  /* --background: yyhsl(220, 14%, 96%); */
   --background: hsl(38, 100%, 96%);
   --foreground: hsl(240, 5%, 26%);
   --scroll-color: hsl(220, 75%, 36%);
@@ -18,6 +17,8 @@
   --secondary-deep-color: hsl(220, 75%, 36%);
   --secondary-light-color: hsl(216, 90%, 67%);
   --bg-primary: hsl(38, 100%, 96%);
+
+  --bg-box: hsl(38, 100%, 99%);
 }
 
 :root[class="dark"] {
@@ -28,6 +29,8 @@
   --bg-svg: var(--background);
   --bg-secondary-svg: #1d1d1d;
   --border-svg: #464646;
+
+  --bg-box: hsl(240, 5%, 22%);
 }
 
 ::view-transition-old(root),
@@ -57,7 +60,10 @@ body {
 
 @layer components {
   .animate-transformY {
-    animation: transformY 10s linear infinite forwards;
+    animation: transformY 5s linear infinite forwards;
+  }
+  .animate-transformYX {
+    animation: transformYX 10s linear infinite forwards;
   }
 
   .animate-neon-text-primary-shadow {
@@ -100,6 +106,26 @@ body::-webkit-scrollbar-thumb, .scroll {
 }
 
 @keyframes transformY {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(15%);
+  }
+  20% {
+    transform: translateY(30%);
+  }
+  30% {
+    transform: translateY(45%);
+  }
+  40% {
+    transform: translateY(60%);
+  }
+  50% {
+    transform: translateY(75%);
+  }
+}
+@keyframes transformYX {
   0% {
     transform: translateY(0) translateX(0);
   }

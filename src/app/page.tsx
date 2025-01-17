@@ -40,14 +40,14 @@ export default function Home() {
           </span>
         </div>
         <div className={styles.buttons}>
-        <ButtonGradientComponent color="secondary_light" colors={["from-secondary_deep", "to-blue-400"]} icon={<CallCalling size="32" />} text="مشاوره" />
-        <ButtonGradientComponent color="black" colors={["from-primary", "to-orange-300"]} icon={<Category2 size="32" />} text="نمونه کارها" />
+        <ButtonGradientComponent className="bg-gradient-to-l from-secondary_deep to-blue-400" color="secondary_light" colors={["from-secondary_deep", "to-blue-400"]} icon={<CallCalling size="32" />} text="مشاوره" />
+        <ButtonGradientComponent className="bg-gradient-to-l from-primary to-orange-300" color="black" colors={["from-primary", "to-orange-300"]} icon={<Category2 size="32" />} text="نمونه کارها" />
         </div>
       </div>
       <div>
         <DevicesSvg className={styles.image_devices} />
       </div>
-      <div aria-hidden className={styles.gradient_circle_animate + " animate-transformY"}></div>
+      <div aria-hidden className={styles.gradient_circle_animate + " animate-transformY md:animate-transformYX"}></div>
       <div className={styles.dots_pattern}>
         <SquareDotsSvg />
       </div>
