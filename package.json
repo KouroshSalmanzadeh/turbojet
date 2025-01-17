@@ -11,8 +11,10 @@
     "prettier:fix": "prettier . --write"
   },
   "dependencies": {
+    "@lordicon/react": "^1.10.1",
     "autoprefixer": "^10.4.20",
     "iconsax-react": "^0.0.8",
+    "lottie-web": "^5.12.2",
     "next": "14.2.20",
     "react": "^18",
     "react-dom": "^18"

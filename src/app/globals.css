@@ -5,6 +5,28 @@
 @tailwind utilities;
 
 :root {
+  --background: hsl(240, 4%, 16%);
+  --foreground: hsl(0, 0%, 100%);
+  --scroll-color: hsl(23, 100%, 56%);
+
+  --bg-svg: var(--background);
+  --bg-secondary-svg: #1d1d1d;
+  --border-svg: hsl(0, 0%, 27%);
+
+  --bg-box: hsl(240, 5%, 22%);
+
+  --primary-color: hsl(23, 100%, 56%);
+  --secondary-deep-color: hsl(220, 75%, 36%);
+  --secondary-light-color: hsl(216, 90%, 67%);
+  --bg-primary: hsl(38, 100%, 96%);
+
+  --border-default: hsl(240, 5%, 26%);
+
+  --bg-gradient-box: linear-gradient(to top right, hsla(0, 0%, 41%, 0.10), hsla(0, 0%, 38%, 0.1));
+
+}
+
+:root[class="light"] {
   --background: hsl(38, 100%, 96%);
   --foreground: hsl(240, 5%, 26%);
   --scroll-color: hsl(220, 75%, 36%);
@@ -13,24 +35,11 @@
   --bg-secondary-svg: hsl(0, 0%, 95%);
   --border-svg: hsl(0, 0%, 90%);
 
-  --primary-color: hsl(23, 100%, 56%);
-  --secondary-deep-color: hsl(220, 75%, 36%);
-  --secondary-light-color: hsl(216, 90%, 67%);
-  --bg-primary: hsl(38, 100%, 96%);
-
   --bg-box: hsl(38, 100%, 99%);
-}
 
-:root[class="dark"] {
-  --background: hsl(240, 4%, 16%);
-  --foreground: hsl(0, 0%, 100%);
-  --scroll-color: #FF731D;
+  --border-default:rgb(212 212 216);
 
-  --bg-svg: var(--background);
-  --bg-secondary-svg: #1d1d1d;
-  --border-svg: #464646;
-
-  --bg-box: hsl(240, 5%, 22%);
+  --bg-gradient-box: linear-gradient(to top right, hsl(240, 5%, 84%, 0.1), hsl(240, 5%, 96%, 0.1));
 }
 
 ::view-transition-old(root),
@@ -142,7 +151,7 @@ body::-webkit-scrollbar-thumb, .scroll {
     transform: translateY(40%) translateX(40%);
   }
   50% {
-    transform: translateY(50%) translateX(50%);
+    transform: translateY(40%) translateX(50%);
   }
 }
 

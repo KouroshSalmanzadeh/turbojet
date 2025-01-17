@@ -1,5 +1,5 @@
 .home {
-    @apply relative h-screen w-full flex flex-col-reverse gap-8 my-40 lg:mt-0 lg:mb-0 lg:flex-row items-center justify-center lg:justify-between container;
+    @apply relative h-screen w-full flex flex-col-reverse gap-8 my-40 lg:mt-0 lg:mb-10 lg:flex-row items-center justify-center lg:justify-between container;
 
     .content {
         @apply grow h-full flex-center flex-col gap-10;
@@ -34,12 +34,53 @@
     }
 
     .gradient_circle_animate {
-        @apply absolute left-0 xl:-left-[300px] top-1/3 lg:top-96 -z-40 h-[400px] w-[400px] lg:w-[600px] xl:w-[1000px] -rotate-[22deg] opacity-70 blur-[100px];
+        @apply absolute left-0 xl:-left-[200px] top-1/4 lg:top-96 -z-40 h-[400px] w-[400px] lg:w-[600px] xl:w-[1000px] -rotate-[22deg] opacity-70 blur-[100px];
         background: radial-gradient(50% 50% at 50% 50%, #FF731D 0%, rgba(127, 47, 207, 0) 100%);
         transform: translate3d(0, 0, 0);
     }
 
     .dots_pattern {
         @apply hidden xl:block absolute -right-80;
+    }
+}
+
+.services {
+    @apply container mb-10 flex items-center justify-between gap-20 text-center;
+
+    
+    .content {
+        @apply min-h-full;
+
+        .content_text {
+            @apply flex flex-col items-center gap-4;
+
+            .title {
+                @apply text-6xl text-primary font-MorabbaBold;
+            }
+        
+            b {
+                @apply text-primary text-2xl px-1;
+            }
+        }
+
+        .content_box {
+            @apply h-full grid grid-cols-2 gap-x-6 mt-10;
+
+            .box {
+                @apply flex flex-col items-center gap-6 justify-start p-4 rounded-2xl basis-1/3 shadow-lg aspect-square border border-[var(--border-default)];
+
+                background-image: var(--bg-gradient-box);
+                
+                .title_box {
+                    @apply w-full flex items-center justify-start gap-4 text-right text-xl text-[var(--foreground)] font-MorabbaMedium font-bold;
+                }
+            }
+
+
+            .box:nth-child(even) {
+                @apply mt-6;
+            }
+        }
+        
     }
 }
