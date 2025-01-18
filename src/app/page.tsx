@@ -11,16 +11,11 @@ import ButtonGradientComponent from "@/utils/gradient button/ButtonGradientCompo
 import ServicesSvg from "@/assets/illustration/ServicesSvg";
 import UnderlineIcon from "@/assets/icons/UnderlineIcon";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import LottieIcon from "@/assets/icons/lotties/LottieIcon";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import mobile from '@/assets/icons/lotties/mobile.json';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import web from '@/assets/icons/lotties/web.json';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import rocket from '@/assets/icons/lotties/rocket.json';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import sms from '@/assets/icons/lotties/sms.json';
+
+import MobileLottieIcon from "@/assets/icons/lotties/MobileLottieIcon";
+import WebLottieIcon from "@/assets/icons/lotties/WebLottieIcon";
+import RocketLottieIcon from "@/assets/icons/lotties/RocketLottieIcon";
+import SmsLottieicon from "@/assets/icons/lotties/SmsLottieicon";
 
 export default function Home() {
   return (
@@ -86,7 +81,7 @@ export default function Home() {
                 <UnderlineIcon color="var(--foreground)" />
                 طراحی سایت
               </span>
-              <LottieIcon color="var(--secondary-light-color)" size={150} icon={web} loopPlay={true} />
+              <WebLottieIcon />
               <p>طراحی خاص و اختصاصی سایت شما با دیزاین مطابق سلیقه شما </p>
               <ButtonGradientComponent className="!w-full" color="secondary_light" colors={["from-secondary_deep", "to-blue-400"]} icon={<CallCalling size="32" />} text="مشاوره" />
             </div>
@@ -95,7 +90,7 @@ export default function Home() {
                 <UnderlineIcon color="var(--foreground)" />
                 طراحی اپلیکیشن
               </span>
-              <LottieIcon color="var(--primary-color)" size={150} icon={mobile} loopPlay={true} />
+              <MobileLottieIcon />
               <p>طراحی و ساخت اپلیکیشن های PWA برای تمامی موبایل ها (IOS , Android)</p>
               <ButtonGradientComponent className="!w-full" color="secondary_light" colors={["from-primary", "to-orange-300"]} icon={<CallCalling size="32" />} text="مشاوره" />
             </div>
@@ -104,7 +99,7 @@ export default function Home() {
                 <UnderlineIcon color="var(--foreground)" />
                 افزایش سرعت سایت
               </span>
-              <LottieIcon size={150} icon={rocket} color="var(--secondary-light-color)" loopPlay={true} />
+              <RocketLottieIcon />
               <p>افزایش سرعت تضمینی وب سایت وردپرسی شما با کمترین زمان</p>
               <ButtonGradientComponent className="!w-full" color="secondary_light" colors={["from-secondary_deep", "to-blue-400"]} icon={<CallCalling size="32" />} text="مشاوره" />
             </div>
@@ -113,7 +108,7 @@ export default function Home() {
                 <UnderlineIcon color="var(--foreground)" />
                 پنل پیامکی
               </span>
-              <LottieIcon color="var(--primary-color)" size={150} icon={sms} loopPlay={true} />
+              <SmsLottieicon />
               <p>تبلیغات گسترده و جذب مشتری را با پنل پیامکی حرفه ای ما تجربه کنید</p>
               <ButtonGradientComponent className="!w-full" color="secondary_light" colors={["from-primary", "to-orange-300"]} icon={<CallCalling size="32" />} text="مشاوره" />
             </div>
