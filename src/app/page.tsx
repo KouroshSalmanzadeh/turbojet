@@ -11,10 +11,15 @@ import ButtonGradientComponent from "@/utils/gradient button/ButtonGradientCompo
 import ServicesSvg from "@/assets/illustration/ServicesSvg";
 import UnderlineIcon from "@/assets/icons/UnderlineIcon";
 
-import LottieIcon from "@/assets/icons/lotties/LottieIcon";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// import LottieIcon from "@/assets/icons/lotties/LottieIcon";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import mobile from '@/assets/icons/lotties/mobile.json';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import web from '@/assets/icons/lotties/web.json';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import rocket from '@/assets/icons/lotties/rocket.json';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import sms from '@/assets/icons/lotties/sms.json';
 
 export default function Home() {
