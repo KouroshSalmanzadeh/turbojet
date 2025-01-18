@@ -25,16 +25,17 @@ const LottieIcon = ({ icon, color, size, loopPlay = false }: Props) => {
       playerRef.current?.playFromBeginning();
     }
   };
-
-  return (
-    <Player
-      ref={playerRef}
-      icon={icon}
-      size={size}
-      colorize={color}
-      onComplete={loopPlay ? handleComplete : undefined}
-    />
-  );
+  if (typeof window !== 'undefined') {
+    return (
+      <Player
+        ref={playerRef}
+        icon={icon}
+        size={size}
+        colorize={color}
+        onComplete={loopPlay ? handleComplete : undefined}
+      />
+    );
+  }
 };
 
 export default dynamic(() => Promise.resolve(LottieIcon), {
