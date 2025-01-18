@@ -13,11 +13,13 @@ import UnderlineIcon from "@/assets/icons/UnderlineIcon";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import MobileLottieIcon from "@/assets/icons/lotties/MobileLottieIcon";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import WebLottieIcon from "@/assets/icons/lotties/WebLottieIcon";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import RocketLottieIcon from "@/assets/icons/lotties/RocketLottieIcon";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import SmsLottieicon from "@/assets/icons/lotties/SmsLottieicon";
+
 
 import AboutUsSection from "./components/abou us/AboutUsSection";
 import TitleBoldComponent from "@/utils/title bold/TitleBoldComponent";
@@ -95,7 +97,7 @@ export default function Home() {
                 <UnderlineIcon color="var(--foreground)" />
                 طراحی اپلیکیشن
               </span>
-              {/* <MobileLottieIcon /> */}
+              <MobileLottieIcon />
               <p>طراحی و ساخت اپلیکیشن های PWA برای تمامی موبایل ها (IOS , Android)</p>
               <ButtonGradientComponent className="!w-full" color="secondary_light" colors={["from-primary", "to-orange-300"]} icon={<CallCalling size="32" />} text="مشاوره" />
             </div>
@@ -104,7 +106,7 @@ export default function Home() {
                 <UnderlineIcon color="var(--foreground)" />
                 افزایش سرعت سایت
               </span>
-              {/* <RocketLottieIcon /> */}
+              <RocketLottieIcon />
               <p>افزایش سرعت تضمینی وب سایت وردپرسی شما با کمترین زمان</p>
               <ButtonGradientComponent className="!w-full" color="secondary_light" colors={["from-secondary_deep", "to-blue-400"]} icon={<CallCalling size="32" />} text="مشاوره" />
             </div>
@@ -113,7 +115,7 @@ export default function Home() {
                 <UnderlineIcon color="var(--foreground)" />
                 پنل پیامکی
               </span>
-              {/* <SmsLottieicon /> */}
+              <SmsLottieicon />
               <p>تبلیغات گسترده و جذب مشتری را با پنل پیامکی حرفه ای ما تجربه کنید</p>
               <ButtonGradientComponent className="!w-full" color="secondary_light" colors={["from-primary", "to-orange-300"]} icon={<CallCalling size="32" />} text="مشاوره" />
             </div>
