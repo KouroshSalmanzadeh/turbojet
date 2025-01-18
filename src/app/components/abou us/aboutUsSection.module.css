@@ -1,0 +1,44 @@
+.about_us {
+    @apply relative container flex justify-between items-center my-40; 
+
+    .content {
+        @apply flex flex-col gap-20;
+
+        .desc {
+            @apply flex-center flex-col gap-8 p-10 text-justify rounded-3xl rounded-bl-[10rem] shadow-lg border border-[var(--border-default)];
+            background-image: var(--bg-gradient-box);
+            
+            p {
+                @apply leading-8;
+            }
+    
+            b {
+                @apply text-primary text-2xl px-1;
+            }
+        }
+
+        .skills {
+            @apply flex flex-wrap justify-center gap-6;
+
+            .skill_box {
+                @apply size-24 flex-center p-2 text-justify rounded-2xl shadow-lg border border-[var(--border-default)];
+                background-image: var(--bg-gradient-box);
+
+                svg {
+                    @apply w-full h-full text-[var(--foreground)];
+                }
+                
+            }
+        }
+    }
+
+    .imageParent {
+        @apply w-1/2;
+    }
+
+    .gradient_circle_animate  {
+        @apply absolute right-0 xl:-right-[150px] top-0 lg:top-0 -z-40 h-[400px] w-[400px] lg:w-[600px] xl:w-[1000px] -rotate-[22deg] opacity-70 blur-[100px];
+        background: radial-gradient(50% 50% at 50% 50%, var(--secondary-deep-color) 0%, rgba(127, 47, 207, 0) 100%);
+        transform: translate3d(0, 0, 0);
+    }
+}

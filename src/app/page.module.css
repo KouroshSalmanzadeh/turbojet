@@ -7,10 +7,6 @@
         .title_desc {
             @apply flex flex-col items-center gap-5 child:text-center;
 
-            h1.title {
-                @apply text-6xl font-MorabbaBold text-primary text-center;
-            }
-
             p:nth-child(2) {
                 @apply text-xl font-DanaBold text-secondary_light;
             }
@@ -54,9 +50,7 @@
         .content_text {
             @apply flex flex-col items-center gap-4;
 
-            .title {
-                @apply text-6xl text-primary font-MorabbaBold;
-            }
+            
         
             b {
                 @apply text-primary text-2xl px-1;
