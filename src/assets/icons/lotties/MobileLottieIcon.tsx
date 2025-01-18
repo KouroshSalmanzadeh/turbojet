@@ -3,10 +3,9 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import mobile from '@/assets/icons/lotties/mobile.json';
 import { useRef } from 'react';
-import dynamic from 'next/dynamic';
 import { Player } from '@lordicon/react';
 
-const MobileLottieIcon = () => {
+export default function MobileLottieIcon () {
     const playerRef = useRef<Player>(null);
 
     // useEffect(() => {
@@ -31,7 +30,3 @@ const MobileLottieIcon = () => {
         />
     );
 };
-
-export default dynamic(() => Promise.resolve(MobileLottieIcon), {
-    ssr: false,
-});
