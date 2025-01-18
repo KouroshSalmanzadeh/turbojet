@@ -15,11 +15,13 @@ const LottieIcon = ({ icon, color, size, loopPlay = false }: Props) => {
   const playerRef = useRef<Player>(null);
 
   useEffect(() => {
-    playerRef.current?.playFromBeginning();
+    if (typeof window !== 'undefined') {
+      playerRef.current?.playFromBeginning();
+    }
   }, []);
 
   const handleComplete = () => {
-    if (loopPlay) {
+    if (loopPlay && typeof window !== 'undefined') {
       playerRef.current?.playFromBeginning();
     }
   };
@@ -30,7 +32,7 @@ const LottieIcon = ({ icon, color, size, loopPlay = false }: Props) => {
       icon={icon}
       size={size}
       colorize={color}
-      onComplete={loopPlay ? handleComplete : undefined} // تابع شرطی
+      onComplete={loopPlay ? handleComplete : undefined}
     />
   );
 };
