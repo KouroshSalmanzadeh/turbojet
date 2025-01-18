@@ -11,11 +11,13 @@ import ButtonGradientComponent from "@/utils/gradient button/ButtonGradientCompo
 import ServicesSvg from "@/assets/illustration/ServicesSvg";
 import UnderlineIcon from "@/assets/icons/UnderlineIcon";
 
-
 import MobileLottieIcon from "@/assets/icons/lotties/MobileLottieIcon";
 import WebLottieIcon from "@/assets/icons/lotties/WebLottieIcon";
 import RocketLottieIcon from "@/assets/icons/lotties/RocketLottieIcon";
 import SmsLottieicon from "@/assets/icons/lotties/SmsLottieicon";
+
+import AboutUsSection from "./components/abou us/AboutUsSection";
+import TitleBoldComponent from "@/utils/title bold/TitleBoldComponent";
 
 export default function Home() {
   return (
@@ -24,7 +26,7 @@ export default function Home() {
       <div className={styles.home}>
         <div className={styles.content}>
           <div className={styles.title_desc}>
-            <h1 className={styles.title}>توربوجت:</h1>
+            <TitleBoldComponent title="توربوجت:" />
             <p>
               طراحی سایت و فروشگاه اینترنتی خود را با ما شروع کنید!
             </p>
@@ -71,7 +73,7 @@ export default function Home() {
         </div>
         <div className={styles.content}>
           <div className={styles.content_text}>
-            <span className={styles.title}>خدمات ویژه ما</span>
+            <TitleBoldComponent title="خدمات ویژه ما" />
             <p>شما در حال مشاهده خدمات محبوب <b>توربوجت</b> هستید. از شروع کسب و کار تا آخرش در کنار شما هستیم.</p>
           </div>
 
@@ -116,6 +118,9 @@ export default function Home() {
         </div>
         <div aria-hidden className={styles.gradient_circle_animate + " animate-transformY md:animate-transformYX"}></div>
       </div>
+
+      {/* About Us Section */}
+      <AboutUsSection />
     </div>
   );
 }
