@@ -41,4 +41,10 @@
         background: radial-gradient(50% 50% at 50% 50%, var(--secondary-deep-color) 0%, rgba(127, 47, 207, 0) 100%);
         transform: translate3d(0, 0, 0);
     }
+
+    .grid_square {
+        @apply absolute inset-0 -top-40 bg-center -z-40;
+        background: url("../../../assets/Background-filler/grid.svg");
+        mask-image: linear-gradient(180deg,white,rgba(255,255,255,0));
+    }
 }

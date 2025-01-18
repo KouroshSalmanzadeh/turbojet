@@ -67,6 +67,7 @@ export default function AboutUsSection() {
         <AboutUsIcon />
       </div>
       <div aria-hidden className={styles.gradient_circle_animate + " animate-transformY"}></div>
+      <div className={styles.grid_square}></div>
     </div>
   )
 }

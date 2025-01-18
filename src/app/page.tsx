@@ -1,4 +1,4 @@
-import SquareDotsSvg from "@/assets/Background filler/SquareDotsSvg";
+import SquareDotsSvg from "@/assets/Background-filler/SquareDotsSvg";
 import TickIcon from "@/assets/icons/TickIcon";
 import DevicesSvg from "@/assets/illustration/DevicesSvg";
 
@@ -11,7 +11,7 @@ import ButtonGradientComponent from "@/utils/gradient button/ButtonGradientCompo
 import ServicesSvg from "@/assets/illustration/ServicesSvg";
 import UnderlineIcon from "@/assets/icons/UnderlineIcon";
 
-import AboutUsSection from "./components/abou us/AboutUsSection";
+import AboutUsSection from "./components/about-us/AboutUsSection";
 import TitleBoldComponent from "@/utils/title bold/TitleBoldComponent";
 import dynamic from "next/dynamic";
 
@@ -126,6 +126,7 @@ export default function Home() {
           </div>
         </div>
         <div aria-hidden className={styles.gradient_circle_animate + " animate-transformY md:animate-transformYX"}></div>
+        <div className={styles.grid_square}></div>
       </div>
 
       {/* About Us Section */}
