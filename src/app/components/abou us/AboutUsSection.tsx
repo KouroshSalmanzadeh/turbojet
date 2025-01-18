@@ -1,8 +1,11 @@
 import React from 'react'
 
 import styles from "./aboutUsSection.module.css";
+
 import AboutUsIcon from '@/assets/icons/AboutUsIcon';
+
 import TitleBoldComponent from '@/utils/title bold/TitleBoldComponent';
+
 import NextIcon from '@/assets/icons/languages/NextIcon';
 import ReactIcon from '@/assets/icons/languages/ReactIcon';
 import LaravelIcon from '@/assets/icons/languages/LaravelIcon';
@@ -63,7 +66,7 @@ export default function AboutUsSection() {
       <div className={styles.imageParent}>
         <AboutUsIcon />
       </div>
-      <div aria-hidden className={styles.gradient_circle_animate}></div>
+      <div aria-hidden className={styles.gradient_circle_animate + " animate-transformY"}></div>
     </div>
   )
 }
