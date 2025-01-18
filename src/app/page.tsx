@@ -11,10 +11,15 @@ import ButtonGradientComponent from "@/utils/gradient button/ButtonGradientCompo
 import ServicesSvg from "@/assets/illustration/ServicesSvg";
 import UnderlineIcon from "@/assets/icons/UnderlineIcon";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import MobileLottieIcon from "@/assets/icons/lotties/MobileLottieIcon";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import WebLottieIcon from "@/assets/icons/lotties/WebLottieIcon";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import RocketLottieIcon from "@/assets/icons/lotties/RocketLottieIcon";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import SmsLottieicon from "@/assets/icons/lotties/SmsLottieicon";
+
 
 import AboutUsSection from "./components/abou us/AboutUsSection";
 import TitleBoldComponent from "@/utils/title bold/TitleBoldComponent";

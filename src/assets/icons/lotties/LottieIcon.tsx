@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import dynamic from 'next/dynamic';
 import { Player } from '@lordicon/react';
 
@@ -11,20 +11,20 @@ type Props = {
   loopPlay?: boolean;
 };
 
-const LottieIcon = ({ icon, color, size, loopPlay = false }: Props) => {
+const LottieIcon = ({ icon, color, size }: Props) => {
   const playerRef = useRef<Player>(null);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      playerRef.current?.playFromBeginning();
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     playerRef.current?.playFromBeginning();
+  //   }
+  // }, []);
 
-  const handleComplete = () => {
-    if (loopPlay && typeof window !== 'undefined') {
-      playerRef.current?.playFromBeginning();
-    }
-  };
+  // const handleComplete = () => {
+  //   if (loopPlay && typeof window !== 'undefined') {
+  //     playerRef.current?.playFromBeginning();
+  //   }
+  // };
 
   return (
     <Player
@@ -32,7 +32,7 @@ const LottieIcon = ({ icon, color, size, loopPlay = false }: Props) => {
       icon={icon}
       size={size}
       colorize={color}
-      onComplete={loopPlay ? handleComplete : undefined}
+      // onComplete={loopPlay ? handleComplete : undefined}
     />
   );
 };
