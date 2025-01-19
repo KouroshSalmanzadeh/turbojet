@@ -22,6 +22,10 @@
 
   --border-default: hsl(240, 5%, 26%);
 
+  --test: #b3bbc9;
+
+  --hover-box-color: hsl(215, 19%, 35%);
+
   --bg-gradient-box: linear-gradient(to top right, hsla(0, 0%, 41%, 0.10), hsla(0, 0%, 38%, 0.1));
 
 }
@@ -38,6 +42,8 @@
   --bg-box: hsl(38, 100%, 99%);
 
   --border-default:rgb(212 212 216);
+
+  --hover-box-color: hsl(210, 40%, 96%);
 
   --bg-gradient-box: linear-gradient(to top right, hsl(240, 5%, 84%, 0.1), hsl(240, 5%, 96%, 0.1));
 }
