@@ -1,0 +1,109 @@
+.footer {
+    @apply relative w-full min-h-[600px] overflow-hidden z-0 shadow-lg border border-[var(--border-default)] rounded-t-3xl;
+
+    perspective: 450px;
+
+    .fade {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0px;
+        z-index: 11;
+        background: radial-gradient(at 50% 50%, rgba(14, 20, 22, 0) 0px, hsl(240, 4%, 10%) 80%);
+    }
+
+    .animate {
+        @apply absolute w-full;
+
+        height: 200%;
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 0px), linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 0px);
+        background-size: 45px 35px;
+        transform-origin: 100% 0px 0px;
+        background-repeat: repeat;
+    }
+
+    .grid_animate_mobile {
+        @apply absolute top-0 w-full h-[28rem] lg:hidden overflow-hidden;
+        perspective: 450px;
+
+        .fade {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0px;
+            z-index: 11;
+            background: radial-gradient(at 50% 50%, rgba(14, 20, 22, 0) 0px, var(--background) 80%);
+        }
+    }
+
+    .content {
+        @apply container relative flex flex-col w-full mb-32 mt-20 md:my-20 z-20 child:flex-center;
+        
+        .container_contnet {
+            @apply w-full flex flex-wrap items-start justify-start lg:justify-between gap-10;
+    
+            .title {
+                @apply text-3xl font-MorabbaBold bg-gradient-to-l from-secondary_light via-secondary_light to-secondary_deep text-transparent bg-clip-text;
+            }
+    
+            .quick_access {
+                @apply flex flex-col items-start gap-6;
+    
+                div:last-child {
+                    @apply flex items-start gap-10 text-xl;
+    
+                    ul {
+                        @apply flex flex-col gap-3;
+                        
+                        li {
+                            @apply w-full h-10;
+                        
+                            a {
+                                @apply grow flex items-center gap-2 w-full h-full text-white hover:font-DanaBold hover:scale-110 hover:text-primary dark:hover:text-primary transition-all duration-200;
+                            }
+                        }
+                    }
+                }
+    
+            }
+        
+            .contact_us {
+                @apply flex flex-col items-start gap-6;
+    
+                & > div:last-child {
+                    @apply flex flex-col flex-wrap gap-4;
+        
+                    .box {
+                        @apply flex items-center gap-4 space-x-2;
+        
+                        svg {
+                            @apply size-14 p-3 bg-[var(--bg-gradient-box)] shadow-lg border border-[var(--border-default)] rounded-full;
+                        }
+        
+                        .tell {
+                            @apply hover:text-primary hover:scale-110 transition-all duration-200;
+                        }
+                    }
+                }
+    
+            }
+    
+            .icons {
+                @apply flex flex-col items-start gap-6;
+    
+                & > div:last-child {
+                    @apply flex items-center gap-3;
+                }
+            }
+        }
+
+    }
+
+    .copy_right {
+        @apply block absolute bottom-10 w-full px-6 z-20 text-center;
+
+        b {
+            @apply mx-1 font-MorabbaBold text-primary text-xl;
+        }
+    }
+}
