@@ -1,0 +1,9 @@
+.faq {
+    @apply relative;
+
+    .grid_square {
+        @apply absolute inset-0 -top-40 bg-center -z-40;
+        background: url("../../../assets/Background-filler/grid.svg");
+        mask-image: linear-gradient(180deg,white,rgba(255,255,255,0));
+    }
+}
