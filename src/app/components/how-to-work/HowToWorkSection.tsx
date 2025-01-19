@@ -19,7 +19,7 @@ export default function HowToWorkSection() {
                 const newNumber = prevNumber === 5 ? 1 : prevNumber + 1;
                 return newNumber;
             });
-        }, 6000);
+        }, 60000);
 
         return () => clearInterval(interval);
     }, []);
