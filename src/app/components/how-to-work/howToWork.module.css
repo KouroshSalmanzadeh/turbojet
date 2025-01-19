@@ -1,0 +1,100 @@
+.how_to_work {
+    @apply relative container w-full mb-20 flex flex-col items-center justify-between;
+
+    .content {
+
+        @apply flex;
+
+        .text_selector {
+            @apply flex-center flex-col gap-4 w-[500px];
+    
+            & > * {
+                @apply w-full py-4 px-8 flex items-center justify-between gap-4 rounded-2xl hover:bg-[var(--hover-box-color)] cursor-pointer;
+    
+                .text_desc {
+                    @apply flex flex-col gap-3;
+    
+                    p {
+                        @apply hidden text-foreground;
+                    }
+    
+                    strong {
+                        @apply text-4xl font-MorabbaMedium;
+                    }
+                }
+    
+                span {
+                    @apply mt-2 text-5xl font-bold;
+                }
+            }
+        }
+
+        .images {
+            @apply w-2/3 overflow-hidden;
+    
+            .containerImages {
+                @apply w-full flex flex-col items-start h-screen;
+        
+                & > * {
+                    @apply w-[1000px] min-h-screen flex-center;
+                }
+    
+        
+                svg {
+                    @apply p-20;
+                }
+            }
+        }
+    
+        .gradient_circle_animate  {
+            @apply absolute right-0 xl:-right-[150px] top-0 lg:top-40 -z-40 h-[400px] w-[400px] lg:w-[600px] xl:w-[1000px] -rotate-[22deg] opacity-70 blur-[100px];
+            background: radial-gradient(50% 50% at 50% 50%, var(--secondary-deep-color) 0%, rgba(127, 47, 207, 0) 100%);
+            transform: translate3d(0, 0, 0);
+        }
+    
+        .grid_square {
+            @apply absolute inset-0 -top-40 bg-center -z-40;
+            background: url("../../../assets/Background-filler/grid.svg");
+            mask-image: linear-gradient(180deg,white,rgba(255,255,255,0));
+        }
+    }
+
+
+
+}
+
+.active_element {
+    @apply text-primary border border-[var(--border-default)] shadow-lg transition-all duration-200;
+
+    .text_desc {
+
+        p {
+            @apply !block;
+        }
+    }
+}
+
+.transform_1 {
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+
+.transform_2 {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+}
+
+.transform_3 {
+    transform: translateY(-200%);
+    transition: transform 0.5s ease;
+}
+
+.transform_4 {
+    transform: translateY(-300%);
+    transition: transform 0.5s ease;
+}
+
+.transform_5 {
+    transform: translateY(-400%);
+    transition: transform 0.5s ease;
+}
