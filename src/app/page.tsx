@@ -15,6 +15,7 @@ import AboutUsSection from "./components/about-us/AboutUsSection";
 import TitleBoldComponent from "@/utils/title bold/TitleBoldComponent";
 import dynamic from "next/dynamic";
 import HowToWorkSection from "./components/how-to-work/HowToWorkSection";
+import FaqSection from "./components/faq/FaqSection";
 
 const WebLottieIcon = dynamic(() => import('@/assets/icons/lotties/WebLottieIcon'), {
   ssr: false,
@@ -135,6 +136,10 @@ export default function Home() {
 
       {/* How to work Turbojet section */}
       <HowToWorkSection />
+
+      { /* FAQ Section */ }
+      <FaqSection />
+
     </div>
   );
 }
