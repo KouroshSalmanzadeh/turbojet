@@ -12,7 +12,7 @@ export default function FaqSection() {
         <div className={styles.faq}>
             <TitleBoldComponent title='سوالات رایج' className='w-full text-center' />
             <p className='text-center mt-8'>
-                پاسخ پرسش هایی که دربارۀ توربوجت و خدمات طراحی سایت داشته باشید
+                پاسخ پرسش هایی که درباره توربوجت و خدمات طراحی سایت داشته باشید
             </p>
             <div className="mt-8 w-full">
                 {faqData.map((faq, index) => (
