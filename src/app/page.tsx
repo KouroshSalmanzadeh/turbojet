@@ -14,6 +14,7 @@ import UnderlineIcon from "@/assets/icons/UnderlineIcon";
 import AboutUsSection from "./components/about-us/AboutUsSection";
 import TitleBoldComponent from "@/utils/title bold/TitleBoldComponent";
 import dynamic from "next/dynamic";
+import HowToWorkSection from "./components/how-to-work/HowToWorkSection";
 
 const WebLottieIcon = dynamic(() => import('@/assets/icons/lotties/WebLottieIcon'), {
   ssr: false,
@@ -131,6 +132,9 @@ export default function Home() {
 
       {/* About Us Section */}
       <AboutUsSection />
+
+      {/* How to work Turbojet section */}
+      <HowToWorkSection />
     </div>
   );
 }
