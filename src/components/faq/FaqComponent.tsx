@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "./FaqTheme.module.css";
-import { ArrowLeft2, ArrowDown2 } from "iconsax-react";
+import { ArrowLeft2 } from "iconsax-react";
 
 interface FaqComponentProps {
   question: string;
@@ -10,23 +10,22 @@ interface FaqComponentProps {
 }
 
 const FaqComponent: React.FC<FaqComponentProps> = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleFaq = () => setIsOpen(!isOpen); 
+  const toggleFaq = () => setIsOpen(!isOpen);
 
   return (
-    <div className={`${styles.faq_card}`} onClick={toggleFaq}>
+    <div
+      className={`${styles.faq_card} ${isOpen ? styles.open : ""}`}
+      onClick={toggleFaq}
+    >
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-bold">{question}</h3>
-        {isOpen ? (
-          <ArrowDown2 size="32" className="transition-transform text-secondary_light" />
-        ) : (
-          <ArrowLeft2 size="32" className="transition-transform text-secondary_light" />
-        )}
+          <ArrowLeft2 size="32" className={`transition-all text-secondary_light ${isOpen ? "-rotate-90" : ""}`} />
       </div>
-      <p className={`mt-2 transition-all ${isOpen ? "block" : "hidden"}`}>
-        {answer}
-      </p>
+      <div className={`${styles.answer} ${isOpen ? styles.answer_open : ""}`}>
+        <p>{answer}</p>
+      </div>
     </div>
   );
 };
