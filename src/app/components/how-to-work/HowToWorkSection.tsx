@@ -67,7 +67,7 @@ export default function HowToWorkSection() {
 
     return (
         <div className={styles.how_to_work}>
-            <TitleBoldComponent className='w-full text-right -mb-20' title='قدم به قدم با توربوجت' />
+            <TitleBoldComponent className='w-full text-center lg:text-right mb-10 2xl:-mb-20' title='قدم به قدم با توربوجت' />
             <div className={styles.content}>
                 <div className={styles.text_selector}>
                     <div onClick={handleSetNewNumber} className={styles.active_element} id='1'>
