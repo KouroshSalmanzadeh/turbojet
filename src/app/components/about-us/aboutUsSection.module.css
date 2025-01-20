@@ -1,8 +1,8 @@
 .about_us {
-    @apply relative container flex justify-between items-center my-40; 
+    @apply relative w-full container flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0 my-40; 
 
     .content {
-        @apply flex flex-col gap-20;
+        @apply w-full flex flex-col gap-20;
 
         .desc {
             @apply flex-center flex-col gap-8 p-10 text-justify rounded-3xl rounded-bl-[10rem] shadow-lg border border-[var(--border-default)];
@@ -33,7 +33,11 @@
     }
 
     .imageParent {
-        @apply w-1/2;
+        @apply w-full lg:w-1/2;
+
+        svg {
+            @apply w-full h-full;
+        }
     }
 
     .gradient_circle_animate  {

@@ -79,7 +79,7 @@ export default function Home() {
 
       {/* Services Section */}
       <div className={styles.services}>
-        <div>
+        <div className={styles.parent_image}>
           <ServicesSvg />
         </div>
         <div className={styles.content}>

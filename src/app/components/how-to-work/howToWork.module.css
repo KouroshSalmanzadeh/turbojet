@@ -2,11 +2,10 @@
     @apply relative container w-full mb-20 flex flex-col items-center justify-between;
 
     .content {
-
-        @apply flex;
+        @apply mx-auto w-full flex flex-col lg:flex-row gap-10;
 
         .text_selector {
-            @apply flex-center flex-col gap-4 w-[500px];
+            @apply w-full flex-center flex-col gap-4 lg:w-[500px];
     
             & > * {
                 @apply w-full py-4 px-8 flex items-center justify-between gap-4 rounded-2xl hover:bg-[var(--hover-box-color)] cursor-pointer;
@@ -30,18 +29,18 @@
         }
 
         .images {
-            @apply w-2/3 overflow-hidden;
+            @apply w-full h-full lg:w-2/3 overflow-hidden;
     
             .containerImages {
-                @apply w-full flex flex-col items-start h-screen;
+                @apply w-[330px] h-[450px] sm:w-[450px] md:w-[550px] md:h-[450px] flex flex-col items-start 2xl:w-full 2xl:h-screen mx-auto;
         
                 & > * {
-                    @apply w-[1000px] min-h-screen flex-center;
+                    @apply w-full h-full sm:min-h-[450px] 2xl:w-[1000px] 2xl:min-h-screen flex-center;
                 }
     
         
                 svg {
-                    @apply p-20;
+                    @apply w-full 2xl:p-20;
                 }
             }
         }

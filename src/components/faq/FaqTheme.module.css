@@ -1,17 +1,27 @@
 .faq_card {
-    @apply mx-auto w-full py-3 px-6 lg:w-1/2 rounded-2xl mb-3 border border-[var(--border-default)] shadow-lg cursor-pointer;
+    @apply mx-auto w-full py-3 px-6 2xl:w-2/3 rounded-2xl mb-3 border border-[var(--border-default)] shadow-lg cursor-pointer;
     max-height: 60px;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.3s ease;
+
+    h3 {
+        transition: max-height 0.3s ease;
+    }
 }
 
 .faq_card.open {
     max-height: 500px;
+    
+    h3 {
+        @apply text-primary;
+        transition: max-height 0.3s ease;
+    }
 }
 
 .answer {
+    margin-top: 1rem;
     opacity: 0;
-    transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease;
 }
 
 .answer_open {
