@@ -1,27 +1,20 @@
-"use client"
+"use client";
 
 import React, { useRef, useState } from 'react';
-
 import styles from "./header.module.css";
-
 import Link from 'next/link';
-
 import { flushSync } from 'react-dom';
-
 import Logo from '@/assets/logo/Logo';
-
 import ToggleThemeComponent from '../ToggleTheme/ToggleThemeComponent';
 import { HambergerMenu } from 'iconsax-react';
+import Sidebar from '../sidbar/SidebarComponent';
 
 const HeaderComponent: React.FC = () => {
-
   const ref = useRef<HTMLLabelElement>(null);
-
   const [theme, setTheme] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const changeTheme = async () => {
-    // * Return early if View Transition API is not supported
-    //  * or user prefers reduced motion
     if (
       !ref.current ||
       !document.startViewTransition ||
@@ -47,15 +40,10 @@ const HeaderComponent: React.FC = () => {
 
     if (ref.current) {
       const parent = ref.current;
-
       if (!parent) return;
       const { top, left, width, height } = parent.getBoundingClientRect();
-
-      // محاسبه مرکز عنصر
       const centerX = left + width - 25;
       const centerY = top + height - 25;
-
-      // محاسبه شعاع بزرگترین دایره
       const maxRadius = Math.hypot(
         Math.max(centerX, window.innerWidth - centerX),
         Math.max(centerY, window.innerHeight - centerY),
@@ -76,61 +64,55 @@ const HeaderComponent: React.FC = () => {
       );
     }
   };
+
   return (
-    <header className={styles.header}>
+    <>
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen}>
+        <ul className={"h-screen flex-center flex-col text-2xl font-semibold child:w-full child:text-center"}>
+          <li className='child:hover:bg-secondary_light/10 child:hover:scale-110 child:hover:text-primary child:px-2 child:py-4 child:rounded-xl child:transition-all child:block'><Link href={"/services/website"}>طراحی سایت</Link></li>
+          <li className='child:hover:bg-secondary_light/10 child:hover:scale-110 child:hover:text-primary child:px-2 child:py-4 child:rounded-xl child:transition-all child:block'><Link href={"/services/app"}>طراحی اپلیکیشن</Link></li>
+          <li className='child:hover:bg-secondary_light/10 child:hover:scale-110 child:hover:text-primary child:px-2 child:py-4 child:rounded-xl child:transition-all child:block'><Link href={"/services/site-speed"}>افزایش سرعت سایت</Link></li>
+          <li className='child:hover:bg-secondary_light/10 child:hover:scale-110 child:hover:text-primary child:px-2 child:py-4 child:rounded-xl child:transition-all child:block'><Link href={"/services/sms-panel"}>پنل پیامکی</Link></li>
+        </ul>
+      </Sidebar>
+      
+      <header className={styles.header}>
+        {/* منوی موبایل */}
+        <div className={styles.mobile_menu}>
+          <HambergerMenu size="32" onClick={() => setIsOpen(!isOpen)} />
+        </div>
 
-      <div className={styles.mobile_menu}>
-        <HambergerMenu size="32" />
-      </div>
-
-      {/* Logo Section */}
-      <div className={styles.logo}>
-        <Link className={styles.link} href="/">
-          <Logo className={styles.img_logo} />
-          <h2>توربوجـــــــــــت</h2>
-        </Link>
-      </div>
-
-      {/* Navigation Links */}
-      <nav className={styles.nav_menu}>
-        <Link href="/">
-          صفحه اصلی
-        </Link>
-        <span className='group'>
-          <Link href="/services">
-            خدمات
+        {/* لوگو */}
+        <div className={styles.logo}>
+          <Link className={styles.link} href="/">
+            <Logo className={styles.img_logo} />
+            <h2>توربوجـــــــــــت</h2>
           </Link>
-          <ul className={styles.dropdown + " opacity-0 invisible group-hover:opacity-100 group-hover:visible"}>
-            <li>
-              <Link href={"/services/website"}>طراحی سایت</Link>
-            </li>
-            <li>
-              <Link href={"/services/app"}>طراحی اپلیکیشن</Link>
-            </li>
-            <li>
-              <Link href={"/services/site-speed"}>افزایش سرعت سایت</Link>
-            </li>
-            <li>
-              <Link href={"/services/sms-panel"}>پنل پیامکی</Link>
-            </li>
-          </ul>
-        </span>
-        <Link href="/blog">
-          بلاگ
-        </Link>
-        <Link href="/about">
-          درباره ما
-        </Link>
-        <Link href="/contact">
-          تماس با ما
-        </Link>
-      </nav>
+        </div>
 
-      {/* Toggle theme */}
-      <div className={styles.toggle_theme}>
-        <ToggleThemeComponent ref={ref} changeTheme={changeTheme} />
-      </div>
-    </header>
+        {/* منوی ناوبری */}
+        <nav className={styles.nav_menu}>
+          <Link href="/">صفحه اصلی</Link>
+          <span className='group'>
+            <Link href="/services">خدمات</Link>
+            <ul className={styles.dropdown + " opacity-0 invisible group-hover:opacity-100 group-hover:visible"}>
+              <li><Link href={"/services/website"}>طراحی سایت</Link></li>
+              <li><Link href={"/services/app"}>طراحی اپلیکیشن</Link></li>
+              <li><Link href={"/services/site-speed"}>افزایش سرعت سایت</Link></li>
+              <li><Link href={"/services/sms-panel"}>پنل پیامکی</Link></li>
+            </ul>
+          </span>
+          <Link href="/blog">بلاگ</Link>
+          <Link href="/about">درباره ما</Link>
+          <Link href="/contact">تماس با ما</Link>
+        </nav>
+
+        {/* تغییر تم */}
+        <div className={styles.toggle_theme}>
+          <ToggleThemeComponent ref={ref} changeTheme={changeTheme} />
+        </div>
+      </header>
+    </>
   );
 };
 

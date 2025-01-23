@@ -30,7 +30,7 @@
     }
 
     .gradient_circle_animate {
-        @apply absolute left-0 xl:-left-[200px] top-1/4 lg:top-96 -z-40 h-[400px] w-[400px] lg:w-[600px] xl:w-[1000px] -rotate-[22deg] opacity-70 blur-[100px];
+        @apply absolute left-0 xl:-left-[100px] top-1/4 lg:top-96 -z-40 h-[400px] w-[400px] lg:w-[600px] xl:w-[1000px] -rotate-[22deg] opacity-70 blur-[100px];
         background: radial-gradient(50% 50% at 50% 50%, #FF731D 0%, rgba(127, 47, 207, 0) 100%);
         transform: translate3d(0, 0, 0);
     }
@@ -65,7 +65,7 @@
         }
 
         .content_box {
-            @apply h-full grid grid-cols-2 gap-x-6 mt-10;
+            @apply h-full grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-x-6 sm:gap-y-0 mt-10;
 
             .box {
                 @apply flex flex-col items-center gap-6 justify-start p-4 rounded-2xl basis-1/3 shadow-lg aspect-square border border-[var(--border-default)];
@@ -79,14 +79,14 @@
 
 
             .box:nth-child(even) {
-                @apply mt-10;
+                @apply sm:mt-10;
             }
 
             .box:nth-child(3) {
-                @apply -mt-4;
+                @apply sm:-mt-4;
             }
             .box:nth-child(4) {
-                @apply mt-6;
+                @apply sm:mt-6;
             }
         }        
     }

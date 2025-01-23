@@ -90,9 +90,11 @@ export default function FooterComponent() {
                             </div>
                             <div className={styles.box}>
                                 <Call size="30" />
-                                <a className={styles.tell} href="tel:+989923120730">09923120730</a>
-                                <a className={styles.tell} href="tel:+989152363485">09152363485</a>
-                                <a className={styles.tell} href="tel:+989392330297">09392330297</a>
+                                <div className='flex flex-wrap gap-3'>
+                                    <a className={styles.tell} href="tel:+989923120730">09923120730</a>
+                                    <a className={styles.tell} href="tel:+989152363485">09152363485</a>
+                                    <a className={styles.tell} href="tel:+989392330297">09392330297</a>
+                                </div>
                             </div>
                             <div className={styles.box}>
                                 <Sms size="30" />
