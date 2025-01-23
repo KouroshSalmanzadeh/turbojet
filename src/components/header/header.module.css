@@ -1,49 +1,48 @@
 .header {
-    @apply w-full h-20 flex items-center justify-between rounded-b-xl sm:w-[97%] lg:w-[90%] sm:h-24 fixed top-0 sm:top-4 lg:top-9 right-0 left-0 sm:rounded-3xl mx-auto z-50 md:px-5 px-5 lg:px-10 bg-secondary_deep/50
+  @apply w-full h-20 flex items-center justify-between rounded-b-xl sm:w-[97%] lg:w-[90%] sm:h-24 fixed top-0 sm:top-4 lg:top-9 right-0 left-0 sm:rounded-3xl mx-auto z-30 md:px-5 px-5 lg:px-10 bg-secondary_deep/50
     backdrop-blur-[8px];
 
-    .mobile_menu {
-        @apply sm:hidden;
+  .mobile_menu {
+    @apply sm:hidden;
 
-        svg {
-            @apply text-white cursor-pointer;
-        }
+    svg {
+      @apply text-white cursor-pointer;
+    }
+  }
+
+  .logo {
+    @apply grow;
+
+    .link {
+      @apply flex sm:flex-col items-center justify-center gap-2 sm:gap-0 text-3xl sm:text-xl text-primary;
     }
 
-    .logo {
-        @apply grow;
-
-        .link {
-            @apply flex sm:flex-col items-center justify-center gap-2 sm:gap-0 text-3xl sm:text-xl text-primary;
-        }
-
-        .img_logo {
-            @apply w-16 h-16;
-        }
-
-        h2 {
-            @apply !font-MorabbaMedium;
-        }
+    .img_logo {
+      @apply w-16 h-16;
     }
 
-    .nav_menu {
-        @apply hidden w-full sm:flex items-center justify-center gap-4 lg:gap-8 text-lg lg:text-xl font-semibold;
-
-        & > * {
-            @apply text-white hover:font-DanaBold hover:scale-110 hover:text-primary dark:hover:text-primary transition-all duration-200;
-        }
-
-        .dropdown {
-            @apply absolute top-8 w-44 flex flex-col gap-2 p-4 bg-[var(--bg-box)] rounded-2xl shadow-default border-t-[3px] border-primary transition-all duration-200;
-
-            a {
-                @apply font-semibold text-sm text-[var(--foreground)] dark:!text-white hover:text-primary transition-all duration-300;
-            }
-            
-        }
-
-        .toggle_theme {
-            @apply md:flex items-center space-x-6;
-        }
+    h2 {
+      @apply !font-MorabbaMedium;
     }
+  }
+
+  .nav_menu {
+    @apply hidden w-full sm:flex items-center justify-center gap-4 lg:gap-8 text-lg lg:text-xl font-semibold;
+
+    & > * {
+      @apply text-white hover:font-DanaBold hover:scale-110 hover:text-primary dark:hover:text-primary transition-all duration-200;
+    }
+
+    .dropdown {
+      @apply absolute top-8 w-44 flex flex-col gap-2 p-4 bg-[var(--bg-box)] rounded-2xl shadow-default border-t-[3px] border-primary transition-all duration-200;
+
+      a {
+        @apply font-semibold text-sm text-[var(--foreground)] dark:!text-white hover:text-primary transition-all duration-300;
+      }
+    }
+
+    .toggle_theme {
+      @apply md:flex items-center space-x-6;
+    }
+  }
 }

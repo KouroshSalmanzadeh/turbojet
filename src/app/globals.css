@@ -28,6 +28,8 @@
 
   --bg-gradient-box: linear-gradient(to top right, hsla(0, 0%, 41%, 0.10), hsla(0, 0%, 38%, 0.1));
 
+  --bg-overlay: hsla(240, 4%, 16%, 0.30);
+
 }
 
 :root[class="light"] {
@@ -46,6 +48,8 @@
   --hover-box-color: hsl(210, 40%, 96%);
 
   --bg-gradient-box: linear-gradient(to top right, hsl(240, 5%, 84%, 0.1), hsl(240, 5%, 96%, 0.1));
+
+  --bg-overlay: hsla(39, 100%, 96%, 0.30);
 }
 
 ::view-transition-old(root),
@@ -65,7 +69,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   overflow-y: auto;
 }
 
