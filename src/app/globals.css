@@ -7,7 +7,7 @@
 :root {
   --background: hsl(240, 4%, 16%);
   --foreground: hsl(0, 0%, 100%);
-  --scroll-color: hsl(23, 100%, 56%);
+  --scroll-color: var(--primary-color);
 
   --bg-svg: var(--background);
   --bg-secondary-svg: #1d1d1d;
@@ -15,7 +15,7 @@
 
   --bg-box: hsl(240, 5%, 22%);
 
-  --primary-color: hsl(23, 100%, 56%);
+  --primary-color: #ff4b4b;
   --secondary-deep-color: hsl(220, 75%, 36%);
   --secondary-light-color: hsl(216, 90%, 67%);
   --bg-primary: hsl(38, 100%, 96%);
@@ -30,16 +30,19 @@
 
   --bg-overlay: hsla(240, 4%, 16%, 0.30);
 
+  --bg-radial-footer: hsl(240, 4%, 10%);
+  --square-animate-footer: rgba(255, 255, 255, 0.3);
+
 }
 
 :root[class="light"] {
-  --background: hsl(38, 100%, 96%);
+  --background: hsla(220, 75%, 36%, 0.039);
   --foreground: hsl(240, 5%, 26%);
   --scroll-color: hsl(220, 75%, 36%);
 
-  --bg-svg: var(--background);
+  --bg-svg: #F5F7FB;
   --bg-secondary-svg: hsl(0, 0%, 95%);
-  --border-svg: hsl(0, 0%, 90%);
+  --border-svg: hsl(0, 0%, 87%);
 
   --bg-box: hsl(38, 100%, 99%);
 
@@ -50,6 +53,9 @@
   --bg-gradient-box: linear-gradient(to top right, hsl(240, 5%, 84%, 0.1), hsl(240, 5%, 96%, 0.1));
 
   --bg-overlay: hsla(39, 100%, 96%, 0.30);
+
+  --bg-radial-footer: #ebf0fa;
+  --square-animate-footer: rgba(146, 146, 146, 0.3);
 }
 
 ::view-transition-old(root),
@@ -69,7 +75,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  /* overflow-x: hidden; */
+  overflow-x: hidden !important;
   overflow-y: auto;
 }
 

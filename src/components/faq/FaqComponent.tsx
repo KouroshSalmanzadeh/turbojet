@@ -20,7 +20,7 @@ const FaqComponent: React.FC<FaqComponentProps> = ({ question, answer }) => {
       onClick={toggleFaq}
     >
       <div className="flex justify-between items-center">
-        <h3 className="text-lg font-bold">{question}</h3>
+        <h3 className="text-xl xl:text-2xl font-bold">{question}</h3>
           <ArrowLeft2 size="32" className={`transition-all text-secondary_light ${isOpen ? "-rotate-90" : ""}`} />
       </div>
       <div className={`${styles.answer} ${isOpen ? styles.answer_open : ""}`}>

@@ -65,13 +65,13 @@ export default function Home() {
           </div>
           <div className={styles.buttons}>
             <ButtonGradientComponent className="bg-gradient-to-l from-secondary_deep to-blue-400" color="secondary_light" colors={["from-secondary_deep", "to-blue-400"]} icon={<CallCalling size="32" />} text="مشاوره" />
-            <ButtonGradientComponent className="bg-gradient-to-l from-primary to-orange-300" color="black" colors={["from-primary", "to-orange-300"]} icon={<Category2 size="32" />} text="نمونه کارها" />
+            <ButtonGradientComponent className="bg-gradient-to-l from-primary to-red-300" color="black" colors={["from-primary", "to-orange-300"]} icon={<Category2 size="32" />} text="نمونه کارها" />
           </div>
         </div>
         <div>
           <DevicesSvg className={styles.image_devices} />
         </div>
-        <div aria-hidden className={styles.gradient_circle_animate + " animate-transformY md:animate-transformYX"}></div>
+        <div aria-hidden className={styles.gradient_circle_animate + " animate-transformY"}></div>
         <div className={styles.dots_pattern}>
           <SquareDotsSvg />
         </div>
@@ -105,7 +105,7 @@ export default function Home() {
               </span>
               <MobileLottieIcon />
               <p>طراحی و ساخت اپلیکیشن های PWA برای تمامی موبایل ها (IOS , Android)</p>
-              <ButtonGradientComponent className="!w-full" color="secondary_light" colors={["from-primary", "to-orange-300"]} icon={<CallCalling size="32" />} text="مشاوره" />
+              <ButtonGradientComponent className="!w-full" color="white" colors={["from-primary", "to-red-300"]} icon={<CallCalling size="32" />} text="مشاوره" />
             </div>
             <div className={styles.box}>
               <span className={styles.title_box}>
@@ -123,11 +123,11 @@ export default function Home() {
               </span>
               <SmsLottieicon />
               <p>تبلیغات گسترده و جذب مشتری را با پنل پیامکی حرفه ای ما تجربه کنید</p>
-              <ButtonGradientComponent className="!w-full" color="secondary_light" colors={["from-primary", "to-orange-300"]} icon={<CallCalling size="32" />} text="مشاوره" />
+              <ButtonGradientComponent className="!w-full" color="white" colors={["from-primary", "to-red-300"]} icon={<CallCalling size="32" />} text="مشاوره" />
             </div>
           </div>
         </div>
-        <div aria-hidden className={styles.gradient_circle_animate + " animate-transformY md:animate-transformYX"}></div>
+        <div aria-hidden className={styles.gradient_circle_animate + " animate-transformY"}></div>
         <div className={styles.grid_square}></div>
       </div>
 
