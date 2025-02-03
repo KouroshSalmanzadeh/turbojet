@@ -30,8 +30,8 @@
     }
 
     .gradient_circle_animate {
-        @apply absolute left-0 xl:-left-[100px] top-1/4 lg:top-96 -z-40 h-[400px] w-[400px] lg:w-[600px] xl:w-[1000px] -rotate-[22deg] opacity-70 blur-[100px];
-        background: radial-gradient(50% 50% at 50% 50%, #FF731D 0%, rgba(127, 47, 207, 0) 100%);
+        @apply absolute left-0 xl:left-[300px] top-1/4 lg:top-96 -z-40 h-[400px] w-[400px] lg:w-[600px] xl:w-[1000px] -rotate-[22deg] opacity-70 blur-[100px];
+        background: radial-gradient(50% 50% at 50% 50%, var(--primary-color) 0%, rgba(127, 47, 207, 0) 100%);
         transform: translate3d(0, 0, 0);
     }
 
