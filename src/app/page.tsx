@@ -16,6 +16,7 @@ import TitleBoldComponent from "@/utils/title bold/TitleBoldComponent";
 import dynamic from "next/dynamic";
 import HowToWorkSection from "./components/how-to-work/HowToWorkSection";
 import FaqSection from "./components/faq/FaqSection";
+import ContactUsSection from "./components/contact-us/ContactUsSection";
 
 const WebLottieIcon = dynamic(() => import('@/assets/icons/lotties/WebLottieIcon'), {
   ssr: false,
@@ -140,6 +141,8 @@ export default function Home() {
       { /* FAQ Section */ }
       <FaqSection />
 
+      { /* Contact Us Section */ }
+      <ContactUsSection />
     </div>
   );
 }
