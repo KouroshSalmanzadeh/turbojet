@@ -18,7 +18,7 @@ import FigmaIcon from '@/assets/icons/languages/FigmaIcon';
 
 export default function AboutUsSection() {
   return (
-    <div className={styles.about_us}>
+    <div className={styles.about_us} id="about">
       <div className={styles.content}>
         <div className={styles.desc}>
           <TitleBoldComponent className='w-full text-center' title="درباره ما" />

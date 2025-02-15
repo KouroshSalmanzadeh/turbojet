@@ -94,17 +94,17 @@ const HeaderComponent: React.FC = () => {
         <nav className={styles.nav_menu}>
           <Link href="/">صفحه اصلی</Link>
           <span className='group'>
-            <Link href="/services">خدمات</Link>
-            <ul className={styles.dropdown + " opacity-0 invisible group-hover:opacity-100 group-hover:visible"}>
-              <li><Link href={"/services/website"}>طراحی سایت</Link></li>
+            <Link href="#service">خدمات</Link>
+            <ul className={styles.dropdown + " opacity-0 invisible group-hover:opacity-100 "}>
+              {/* <li><Link href={"/services/website"}>طراحی سایت</Link></li>
               <li><Link href={"/services/app"}>طراحی اپلیکیشن</Link></li>
               <li><Link href={"/services/site-speed"}>افزایش سرعت سایت</Link></li>
-              <li><Link href={"/services/sms-panel"}>پنل پیامکی</Link></li>
+              <li><Link href={"/services/sms-panel"}>پنل پیامکی</Link></li> */}
             </ul>
           </span>
-          <Link href="/blog">بلاگ</Link>
-          <Link href="/about">درباره ما</Link>
-          <Link href="/contact">تماس با ما</Link>
+          <Link href="#">بلاگ</Link>
+          <Link href="#about">درباره ما</Link>
+          <Link href="#contact">تماس با ما</Link>
         </nav>
 
         {/* تغییر تم */}

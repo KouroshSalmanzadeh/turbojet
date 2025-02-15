@@ -67,7 +67,7 @@
 *,
 html,
 body {
-  font-family: 'dana-normal', Arial, sans-serif;
+  font-family: 'dana-normal', system-ui !important;
   direction: rtl;
   scroll-behavior: smooth;
 }
@@ -79,6 +79,18 @@ body {
   overflow-y: auto;
 }
 
+.Toastify__toast-theme--dark {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+.Toastify__toast-theme--light {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+.Toastify__toast-container.Toastify__toast-container--top-right {
+  @apply top-0 right-0 md:right-4 md:top-4;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
