@@ -19,7 +19,7 @@ export default function ContactUsSection() {
   const {
     handleSubmit,
     register,
-    formState: { errors, isSubmitting, isDirty, isValid },
+    formState: { errors, isSubmitting },
   } = useForm<FormData>({
     resolver: zodResolver(contactUsSchema),
   });
