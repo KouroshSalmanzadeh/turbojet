@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <div>
       {/* Home Section and landing */}
-      <div className={styles.home}>
+      <div className={styles.home} id="home">
         <div className={styles.content}>
           <div className={styles.title_desc}>
             <TitleBoldComponent title="توربوجت:" />
@@ -79,7 +79,7 @@ export default function Home() {
       </div>
 
       {/* Services Section */}
-      <div className={styles.services}>
+      <div className={styles.services} id="service">
         <div className={styles.parent_image}>
           <ServicesSvg />
         </div>

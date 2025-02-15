@@ -5,6 +5,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import TitleBoldComponent from "@/utils/title bold/TitleBoldComponent";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 
 // import { useForm } from "react-hook-form";
 
@@ -28,23 +31,27 @@ export default function ContactUsSection() {
     try {
       const queryString = new URLSearchParams(data).toString();
       const response = await fetch(`https://hp-service.liara.run/send-message?${queryString}`);
-
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-
+    
+      console.log(response.status, response.ok);
       const result = await response.text();
-      console.log("Success:", result);
+    
+      if (!response.ok) {
+        throw new Error(result); // متن خطا را پرتاب می‌کنیم
+      }
+    
+      toast.success(result);
     } catch (error) {
       console.error("Error:", error);
+      toast.error(`خطا: ${error instanceof Error ? error.message : "مشکلی پیش آمد"}`);
     }
   };
+  
 
   return (
-    <div className="w-full">
+    <div className="w-full" id="contact">
       <TitleBoldComponent title="تماس با ما" className="w-full text-center" />
       <p className="text-center my-8">
-      سوالات خود را از طریق فرم زیر با ما در میان بگذارید؛ پشتیبانی توربوجت در اسرع وقت به درخواست شما رسیدگی خواهد کرد.      </p>
+        سوالات خود را از طریق فرم زیر با ما در میان بگذارید؛ پشتیبانی توربوجت در اسرع وقت به درخواست شما رسیدگی خواهد کرد.      </p>
       <div className={styles.container}>
         <div className={styles.containerInner}>
           <form
@@ -147,7 +154,7 @@ export default function ContactUsSection() {
                       cy="12"
                       r="10"
                       stroke="currentColor"
-                      stroke-width="4"
+                      strokeWidth="4"
                     ></circle>
                     <path
                       className="opacity-75"
@@ -163,6 +170,18 @@ export default function ContactUsSection() {
           </form>
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 }
