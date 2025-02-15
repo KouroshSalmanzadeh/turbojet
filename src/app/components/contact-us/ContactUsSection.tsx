@@ -6,7 +6,6 @@ import TitleBoldComponent from "@/utils/title bold/TitleBoldComponent";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import "react-toastify/dist/ReactToastify.css";
-import { useEffect } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 
 // import { useForm } from "react-hook-form";
@@ -18,11 +17,13 @@ import { contactUsSchema } from "@/zodSchema/contact-us";
 type FormData = z.infer<typeof contactUsSchema>;
 
 export default function ContactUsSection() {
+
+  // const theme = document.documentElement.classList.contains("light") ? "light" : "dark";
   //   const router = useRouter();
   const {
     handleSubmit,
     register,
-    formState: { errors, isSubmitting, isDirty, isValid },
+    formState: { errors, isSubmitting },
   } = useForm<FormData>({
     resolver: zodResolver(contactUsSchema),
   });
@@ -32,16 +33,14 @@ export default function ContactUsSection() {
       const queryString = new URLSearchParams(data).toString();
       const response = await fetch(`https://hp-service.liara.run/send-message?${queryString}`);
     
-      console.log(response.status, response.ok);
       const result = await response.text();
     
       if (!response.ok) {
-        throw new Error(result); // متن خطا را پرتاب می‌کنیم
+        throw new Error(result);
       }
     
       toast.success(result);
     } catch (error) {
-      console.error("Error:", error);
       toast.error(`خطا: ${error instanceof Error ? error.message : "مشکلی پیش آمد"}`);
     }
   };
@@ -170,6 +169,7 @@ export default function ContactUsSection() {
           </form>
         </div>
       </div>
+      
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -180,7 +180,6 @@ export default function ContactUsSection() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="dark"
       />
     </div>
   );
