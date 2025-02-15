@@ -1,5 +1,5 @@
 .faq {
-    @apply relative container mb-60;
+    @apply relative container mb-48;
 
     .grid_square {
         @apply absolute inset-0 -top-40 bg-center -z-40;
