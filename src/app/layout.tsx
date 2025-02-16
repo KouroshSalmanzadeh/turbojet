@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description: "توربوجت ارائه‌دهنده خدمات طراحی وب‌سایت با سرعت بالا، طراحی اختصاصی و بهینه برای سئو.",
   keywords: ["طراحی سایت", "سفارش طراحی سایت", "طراحی سایت اختصاصی", "سئو سایت", "برنامه نویسی وب"],
   alternates: {
-    canonical: "https://turbojetweb.vercel.app/",
+    canonical: "https://turbojetweb.ir",
   },
   robots: {
     index: true,
     follow: true,
   },
-  authors: [{ name: "Turbojet Team", url: "https://turbojetweb.vercel.app/" }],
+  authors: [{ name: "Turbojet Team", url: "https://turbojetweb.ir" }],
   generator: "Next.js",
   applicationName: "Turbojet",
   creator: "Turbojet Team",
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "توربوجت | طراحی سایت حرفه‌ای و سریع",
     description: "توربوجت ارائه‌دهنده خدمات طراحی وب‌سایت با سرعت بالا، طراحی اختصاصی و بهینه برای سئو.",
-    url: "https://turbojetweb.vercel.app/",
+    url: "https://turbojetweb.ir",
     siteName: "Turbojet",
     images: [
       {
-        url: "https://turbojetweb.vercel.app/",
+        url: "https://turbojetweb.ir",
         width: 1200,
         height: 630,
         alt: "توربوجت - طراحی سایت حرفه‌ای و سریع",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     creator: "@turbojet",
     title: "توربوجت | طراحی سایت حرفه‌ای و سریع",
     description: "توربوجت ارائه‌دهنده خدمات طراحی وب‌سایت با سرعت بالا، طراحی اختصاصی و بهینه برای سئو.",
-    images: ["https://turbojetweb.vercel.app/"],
+    images: ["https://turbojetweb.ir"],
   },
 };
 
@@ -74,12 +74,12 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "توربوجت",
-              "url": "https://turbojetweb.vercel.app/",
+              "url": "https://turbojetweb.ir",
               "description": "طراحی سایت اختصاصی و سئو شده با توربوجت.",
               "publisher": {
                 "@type": "Organization",
                 "name": "Turbojet",
-                "logo": "https://turbojetweb.vercel.app/"
+                "logo": "https://turbojetweb.ir"
               }
             })
           }}
