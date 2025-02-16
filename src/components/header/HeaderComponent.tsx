@@ -69,10 +69,10 @@ const HeaderComponent: React.FC = () => {
     <>
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen}>
         <ul className={"h-screen flex-center flex-col text-2xl font-semibold child:w-full child:text-center"}>
-          <li className='child:hover:bg-secondary_light/10 child:hover:scale-110 child:hover:text-primary child:px-2 child:py-4 child:rounded-xl child:transition-all child:block'><Link href={"/services/website"}>طراحی سایت</Link></li>
-          <li className='child:hover:bg-secondary_light/10 child:hover:scale-110 child:hover:text-primary child:px-2 child:py-4 child:rounded-xl child:transition-all child:block'><Link href={"/services/app"}>طراحی اپلیکیشن</Link></li>
-          <li className='child:hover:bg-secondary_light/10 child:hover:scale-110 child:hover:text-primary child:px-2 child:py-4 child:rounded-xl child:transition-all child:block'><Link href={"/services/site-speed"}>افزایش سرعت سایت</Link></li>
-          <li className='child:hover:bg-secondary_light/10 child:hover:scale-110 child:hover:text-primary child:px-2 child:py-4 child:rounded-xl child:transition-all child:block'><Link href={"/services/sms-panel"}>پنل پیامکی</Link></li>
+          <li className='child:hover:bg-secondary_light/10 child:hover:scale-110 child:hover:text-primary child:px-2 child:py-4 child:rounded-xl child:transition-all child:block'><Link href={"/#"}>طراحی سایت</Link></li>
+          <li className='child:hover:bg-secondary_light/10 child:hover:scale-110 child:hover:text-primary child:px-2 child:py-4 child:rounded-xl child:transition-all child:block'><Link href={"/#"}>طراحی اپلیکیشن</Link></li>
+          <li className='child:hover:bg-secondary_light/10 child:hover:scale-110 child:hover:text-primary child:px-2 child:py-4 child:rounded-xl child:transition-all child:block'><Link href={"/#"}>افزایش سرعت سایت</Link></li>
+          <li className='child:hover:bg-secondary_light/10 child:hover:scale-110 child:hover:text-primary child:px-2 child:py-4 child:rounded-xl child:transition-all child:block'><Link href={"/#"}>پنل پیامکی</Link></li>
         </ul>
       </Sidebar>
       
@@ -96,10 +96,10 @@ const HeaderComponent: React.FC = () => {
           <span className='group'>
             <Link href="#service">خدمات</Link>
             <ul className={styles.dropdown + " opacity-0 invisible group-hover:opacity-100 "}>
-              {/* <li><Link href={"/services/website"}>طراحی سایت</Link></li>
-              <li><Link href={"/services/app"}>طراحی اپلیکیشن</Link></li>
-              <li><Link href={"/services/site-speed"}>افزایش سرعت سایت</Link></li>
-              <li><Link href={"/services/sms-panel"}>پنل پیامکی</Link></li> */}
+              <li><Link href={"/#"}>طراحی سایت</Link></li>
+              <li><Link href={"/#"}>طراحی اپلیکیشن</Link></li>
+              <li><Link href={"/#"}>افزایش سرعت سایت</Link></li>
+              <li><Link href={"/#"}>پنل پیامکی</Link></li>
             </ul>
           </span>
           <Link href="#">بلاگ</Link>

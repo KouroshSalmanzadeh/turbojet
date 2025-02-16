@@ -7,6 +7,10 @@
         .title_desc {
             @apply flex flex-col items-center gap-5 child:text-center;
 
+            h1 {
+                @apply text-2xl text-secondary_light;
+            }
+
             p:nth-child(2) {
                 @apply text-xl font-DanaBold text-secondary_light;
             }
@@ -17,7 +21,7 @@
         }
 
         .title_services {
-            @apply grid grid-cols-1 lg:grid-cols-2 gap-6 child:flex child:items-center child:gap-4 child:text-2xl child:font-MorabbaBold child:bg-gradient-to-l child:text-transparent child:from-secondary_deep child:via-secondary_light child:to-secondary_deep child:bg-clip-text;
+            @apply grid grid-cols-1 lg:grid-cols-2 gap-6 child:flex child:items-center child:gap-4 child:text-2xl child:!font-MorabbaBold child:bg-gradient-to-l child:text-transparent child:from-secondary_deep child:via-secondary_light child:to-secondary_deep child:bg-clip-text;
         }
 
         .buttons {
