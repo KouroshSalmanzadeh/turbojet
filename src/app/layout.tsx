@@ -63,7 +63,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="google-site-verification" content="LT0XIm_uNcuk2fmayhLorZJNVwdu5solXJ4VlD__OUo" />
+      <meta name="google-site-verification" content="8cTRKAdEo2lr57gZ-ePOsYDNijX5FrxtpDiaO51JWYQ" />
         <meta charSet="UTF-8" />
         <Script
           id="schema-org"
