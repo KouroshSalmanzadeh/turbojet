@@ -39,12 +39,12 @@ export default function Home() {
         <div className={styles.content}>
           <div className={styles.title_desc}>
             <TitleBoldComponent title="توربوجت:" />
-            <p>
+            <h1>
               طراحی سایت و فروشگاه اینترنتی خود را با ما شروع کنید!
-            </p>
-            <p>
+            </h1>
+            <h2>
               تمامی نیازمندی های کسب و کار خود را با توربوجت در سریع ترین و با کیفیت ترین حالت بدست آورید
-            </p>
+            </h2>
           </div>
           <div className={styles.title_services}>
             <span>

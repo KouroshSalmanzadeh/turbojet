@@ -9,6 +9,6 @@ type Props = {
 
 export default function TitleBoldComponent({title, className}: Props) {
   return (
-    <div className={styles.title + ` ${className}`}>{title}</div>
+    <h3 className={styles.title + ` ${className}`}>{title}</h3>
   )
 }
