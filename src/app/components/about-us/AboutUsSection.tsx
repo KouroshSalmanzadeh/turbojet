@@ -11,10 +11,11 @@ import ReactIcon from '@/assets/icons/languages/ReactIcon';
 import LaravelIcon from '@/assets/icons/languages/LaravelIcon';
 import PhpIcon from '@/assets/icons/languages/PhpIcon';
 import WordpressIcon from '@/assets/icons/languages/WordpressIcon';
-import JavaIcon from '@/assets/icons/languages/JavaIcon';
-import DjangoIcon from '@/assets/icons/languages/DjangoIcon';
-import PythonIcon from '@/assets/icons/languages/PythonIcon';
+import PwaIcon from '@/assets/icons/languages/PwaIcon';
+import DjangoIcon from '@/assets/icons/languages/DockerIcon';
+import NodeJsIcon from '@/assets/icons/languages/NodeJsIcon';
 import FigmaIcon from '@/assets/icons/languages/FigmaIcon';
+import WoocommerceIcon from '@/assets/icons/languages/WoocommerceIcon';
 
 export default function AboutUsSection() {
   return (
@@ -47,19 +48,22 @@ export default function AboutUsSection() {
             <PhpIcon />
           </div>
           <div className={styles.skill_box}>
-            <JavaIcon />
+            <PwaIcon />
           </div>
           <div className={styles.skill_box}>
             <DjangoIcon />
           </div>
           <div className={styles.skill_box}>
-            <PythonIcon />
+            <NodeJsIcon />
           </div>
           <div className={styles.skill_box}>
             <WordpressIcon />
           </div>
           <div className={styles.skill_box}>
             <FigmaIcon />
+          </div>
+          <div className={styles.skill_box}>
+            <WoocommerceIcon />
           </div>
         </div>
       </div>

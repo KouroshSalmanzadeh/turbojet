@@ -14,16 +14,16 @@
                     @apply flex flex-col gap-3;
     
                     p {
-                        @apply hidden text-foreground;
+                        @apply hidden text-foreground text-sm md:text-base;
                     }
     
                     strong {
-                        @apply text-4xl font-MorabbaMedium;
+                        @apply md:text-4xl text-xl font-MorabbaMedium;
                     }
                 }
     
                 span {
-                    @apply mt-2 text-5xl font-bold;
+                    @apply mt-2 md:text-5xl text-xl font-bold;
                 }
             }
         }
